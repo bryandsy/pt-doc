@@ -32,4 +32,4 @@ time|long|时间戳 毫秒
 logintype|int|登录状态 0网页 1微端
 is_adult|int|防沉迷 0否 1是
 pt_vip|int|平台vip等级
-sign|string|验证秘钥 SHA256（uid=xxx&sid=xxx&time=xxx&logintype=xxx&is_adult=xxx&pt_vip=xxx+login_token 除sign外参数子串+login_token）
+sign|string|验证秘钥 SHA256（uid=xxx&sid=xxx&time=xxx&logintype=xxx&is_adult=xxx&pt_vip=xxx+login_token 即除sign外参数子串+login_token）
