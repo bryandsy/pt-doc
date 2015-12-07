@@ -19,7 +19,7 @@ login_token|string|必填|游戏登录秘钥(登入验证用)
 gid|int|必填|游戏ID
 sid|string|必填|区服ID
 sname|string|必填|区服名称
-surl|string|必填|区服链接地址
+surl|string|必填|区服登录地址
 opentime|date|必填|区服开服时间(yyyy-MM-dd HH:mm:ss)
 
 ###服务器请求参数
