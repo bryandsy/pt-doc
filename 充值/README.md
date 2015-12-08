@@ -90,7 +90,7 @@
 |iPlayerId|int|必填|角色ID|
 |iGameCurrency|int|必填|元宝/钻石数量|
 |其他公共字段|
-|sign|String|必填|效验码</br>sha1(vOrderNo+iWorldID+iUserId+iPlayerId</br>+iGameCurrency+iGameID+time+salt)|
+|sign|String|必填|效验码</br>sha256(vOrderNo=iGameID&kkk=fff&www=xxx ..</br>+gamesalt)|
 |time|long|必填|当前时间戳|
 
 #### 返回字段说明
