@@ -45,16 +45,18 @@ st->op1->op2->op3->op4->op5->op6->e
   
 -  返回结果
 
-* {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+   * {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
 - 示例说明
 
-* 当返回status为1时，说明充值成功
+  * 当返回status为1时，说明充值成功
 
 > ***内部游戏充值***
+
 充值元宝时，需 验证订单是否有效
+
 - 验证平台订单是否有效
   
- * https://recharge-url/validateorder?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890
+   * https://recharge-url/validateorder?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890
 
 -  返回结果
    
