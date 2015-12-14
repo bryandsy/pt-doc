@@ -1,8 +1,29 @@
-# 充值公共域名
-  domain : recharge-dev.36b.me
-  
-# 外部接口
-## 1. 在线充值页面表单元素
+---
+date: 2015-12-14 17:33
+status: public
+title: README
+---
+
+#平台游戏充值流程
+##平台充值介绍
+> 进入平台首页选择充值功能，进入充值流程（必须检测是否登陆）,如下示例页面
+<p><img style="width: 283px; height: 475px;" alt="platform" src="./game_paltform_index.jpg" title="platform" height="475" width="283"><img style="width: 283px; height: 475px;" alt="recharge" src="./game_recharge.jpg" title="recharge" height="475" width="283"> </p>
+
+
+充值流程图
+```flow
+st=>start: 充值流程
+e=>end
+op1=>operation: 登陆
+op2=>operation: 进入充值功能
+op3=>operation: 选择支付类型
+op4=>operation: 选择充值金额
+op5=>operation: 生成支付二维码
+op6=>operation: 充值
+st->op1->op2->op3->op4->op5->op6->e
+```
+
+## 充值表单必须的参数
 
 | 名称 | 名称ID | 说明 |
 | ---- | ---- | ---- |
@@ -14,10 +35,35 @@
 | 元宝 | iGameCurrency |  
 | 支付类型 |  payType  | 1. ALIPAY (支付宝) </br>2. WEICHAT (微信) |
 
-## 2. 微信充值接口
-### 扫码支付接口URL :
+##平台充值
++ 充值示例：
+
+>  以微信示例：
+- 充值URL示例
+*页面需 增加payType字段，以支持支付类型URL*
+
+  https://recharge-url/recharge/weichat/initOrder?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
+  
+-  返回结果
+{"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+- 示例说明
+当返回status为1时，说明充值成功
+
+> ***内部游戏充值***
+充值元宝时，需 验证订单是否有效
+- 验证平台订单是否有效
+  
+  https://recharge-url/validateorder?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890
+-  返回结果
+{"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+- 示例说明
+当返回status为1时，说明订单有效
+
+##平台充值接口详细说明
+### 1. 微信充值接口
+- 扫码支付接口URL :
      https://domain/recharge/weichat/initOrder
-#### 请求参数列表
+-  请求参数列表
 
 | 参数名称 | 参数类型 | 填写类型 | 参数说明 |
 | ------- | --- |---- |---- |
@@ -29,7 +75,7 @@
 | iDiscount | int | 必填 | 折扣 |
 | iGameCurrency | int | 必填 | 元宝 |
 
-#### 返回结果
+- 返回结果
 
 <pre>JSON示例</pre>
 ```
@@ -41,18 +87,32 @@
 }
 ```
 
-###订单查询接口URL:
+#### 微信订单查询接口URL:
     https://domain/recharge/weichat/queryOrder
-#### 请求参数列表
+- 请求参数列表
 
 | 参数名称 | 参数类型 | 填写类型 | 参数说明 |
 | ------- | --- |---- |---- |
 | vOrderNo | String | 必填 | 订单号 |
 
-## 3. 支付宝充值接口
-#### 扫码支付接口URL
+- 返回结果
+
+<pre>JSON示例</pre>
+```
+{
+    "success": true,
+    "status": 1,
+    "msg": null,
+    "data": {"result":null}
+}
+```
+### > __微信充值示例__
+
+
+## 2. 支付宝充值接口
+- 扫码支付接口URL
      https://domain/recharge/alipay/initOrder
-#### 请求参数列表
+- 请求参数列表
 
 | 参数名称 | 参数类型 | 填写类型 | 参数说明 |
 | ------- | --- |---- |---- |
@@ -64,7 +124,7 @@
 | iDiscount | int | 必填 | 折扣 |
 | iGameCurrency | int | 必填 | 元宝 |
 
-#### 返回结果
+- 返回结果
 
 <pre>JSON示例</pre>
 ```
@@ -129,7 +189,3 @@
 |`bSuccess` |tinyint(1) |是否充值成功 |
 |`dtCreateTime` |datetime |创建时间 |
 |`dtUpdateTime` |datetime |更新时间 |
-
-
-
-
