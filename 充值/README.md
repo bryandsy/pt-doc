@@ -7,7 +7,7 @@ title: README
 #平台游戏充值流程
 ##平台充值介绍
 > 进入平台首页选择充值功能，进入充值流程（必须检测是否登陆）,如下示例页面
-<p><img style="width: 283px; height: 475px;" alt="platform" src="./game_paltform_index.jpg" title="platform" height="475" width="283"><img style="width: 283px; height: 475px;" alt="recharge" src="./game_recharge.jpg" title="recharge" height="475" width="283"> </p>
+<p><img style="width: 283px; height: 475px;" alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="283"><img style="width: 283px; height: 475px;" alt="recharge" src="./game_recharge.jpg" title="recharge" height="475" width="283"> </p>
 
 
 充值流程图
