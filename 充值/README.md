@@ -1,13 +1,7 @@
----
-date: 2015-12-14 17:33
-status: public
-title: README
----
-
 #平台游戏充值流程
 ##平台充值介绍
 > 进入平台首页选择充值功能，进入充值流程（必须检测是否登陆）,如下示例页面
-<p><img style="width: 283px; height: 475px;" alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="283"><img style="width: 283px; height: 475px;" alt="recharge" src="./game_recharge.jpg" title="recharge" height="475" width="283"> </p>
+<p><img style="width: 383px; height: 475px;" alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="283"><img style="width: 383px; height: 475px;" alt="recharge" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_recharge_form.jpg" title="recharge" height="475" width="283"> </p>
 
 
 充值流程图
@@ -42,12 +36,12 @@ st->op1->op2->op3->op4->op5->op6->e
 - 充值URL示例
 *页面需 增加payType字段，以支持支付类型URL*
 
-  https://recharge-url/recharge/weichat/initOrder?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
+  * https://recharge-url/recharge/weichat/initOrder?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
   
 -  返回结果
-{"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+* {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
 - 示例说明
-当返回status为1时，说明充值成功
+* 当返回status为1时，说明充值成功
 
 > ***内部游戏充值***
 充值元宝时，需 验证订单是否有效
