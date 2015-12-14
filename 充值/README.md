@@ -1,7 +1,7 @@
 #平台游戏充值流程
 ##平台充值介绍
 > 进入平台首页选择充值功能，进入充值流程（必须检测是否登陆）,如下示例页面
-<p><img style="width: 583px; height: 475px;" alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="283"><img style="width: 583px; height: 475px;" alt="recharge" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_recharge_form.jpg" title="recharge" height="475" width="283"> </p>
+<p><img  alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="583"><img alt="recharge" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_recharge_form.jpg" title="recharge" height="475" width="583"> </p>
 
 
 充值流程图
@@ -32,6 +32,11 @@ st->op1->op2->op3->op4->op5->op6->e
 ##平台充值
 + 充值示例：
 
+  * 支付宝
+    * https://recharge-url/recharge/alipay/initOrder
+  * 微信
+    * https://recharge-url/recharge/weichat/initOrder
+
 >  以微信示例：
 - 充值URL示例
 *页面需 增加payType字段，以支持支付类型URL*
@@ -39,19 +44,24 @@ st->op1->op2->op3->op4->op5->op6->e
   * https://recharge-url/recharge/weichat/initOrder?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
   
 -  返回结果
+
 * {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
 - 示例说明
+
 * 当返回status为1时，说明充值成功
 
 > ***内部游戏充值***
 充值元宝时，需 验证订单是否有效
 - 验证平台订单是否有效
   
-  https://recharge-url/validateorder?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890
+ * https://recharge-url/validateorder?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890
+
 -  返回结果
-{"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+   
+    * {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+ 
 - 示例说明
-当返回status为1时，说明订单有效
+    * 当返回status为1时，说明订单有效
 
 ##平台充值接口详细说明
 ### 1. 微信充值接口
