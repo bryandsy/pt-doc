@@ -4,19 +4,6 @@
 <p><img  alt="platform" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_platform_index.jpg" title="platform" height="475" width="583"><img alt="recharge" src="https://github.com/szmolin/pt-doc/blob/master/%E5%85%85%E5%80%BC/game_recharge_form.jpg" title="recharge" height="475" width="583"> </p>
 
 
-充值流程图
-```flow
-st=>start: 充值流程
-e=>end
-op1=>operation: 登陆
-op2=>operation: 进入充值功能
-op3=>operation: 选择支付类型
-op4=>operation: 选择充值金额
-op5=>operation: 生成支付二维码
-op6=>operation: 充值
-st->op1->op2->op3->op4->op5->op6->e
-```
-
 ## 充值表单必须的参数
 
 | 名称 | 名称ID | 说明 |
@@ -30,7 +17,7 @@ st->op1->op2->op3->op4->op5->op6->e
 | 支付类型 |  payType  | 1. ALIPAY (支付宝) </br>2. WEICHAT (微信) |
 
 ##平台充值
-+ 充值示例：
++ 充值URL：
 
   * 支付宝
     * https://recharge-url/recharge/alipay/initOrder
