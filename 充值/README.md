@@ -36,8 +36,11 @@ _默认以JSONP方式（get/post）_
 | 游戏元宝 | iGameCurrency |  
 
  > 充值URL
+   
       https://domain/recharge-url?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
+      
   *recharge-url为平台提供*
+  
 -  返回结果
 
 > 成功
