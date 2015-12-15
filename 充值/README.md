@@ -28,7 +28,7 @@
 
 - 充值URL示例
 
-_页面需 增加payType字段，以支持支付类型URL选择_
+_页面需 增加payType字段，以支持支付类型URL选择，默认以JSONP方式（get/post）_
 * 
    * https://recharge-url/recharge/weichat/initOrder?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
   
