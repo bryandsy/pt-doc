@@ -35,6 +35,12 @@ _默认以JSONP方式请求和返回数据（get/post）_
 | 充值数额 | iRmb  | 
 | 游戏元宝 | iGameCurrency |  
 
+JSONP参数
+
+| 名称 | 名称ID | 说明 |
+| ---- | ---- | ---- |
+| 函数 | function | 必须 
+
  > 充值URL
    
       https://domain/recharge-url?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
@@ -65,5 +71,33 @@ _默认以JSONP方式请求和返回数据（get/post）_
 
         当返回status为1或者success为true时，说明充值成功
 
+## ***内部游戏充值***
 
+游戏充值元宝时，需验证订单是否有效
+
+   
+
+> 验证参数
+
+| 名称 | 名称ID | 说明 |
+| ---- | ---- | ---- |
+| 平台用户 | vUserId | 
+| 游戏角色 | iPlayerId |  
+| 游戏平台 | iGameId |  
+| 游戏区服 | iWorldId  | 
+| 充值数额 | iRmb  | 
+| 游戏元宝 | iGameCurrency |  
+
+JSONP参数
+
+| 名称 | 名称ID | 说明 |
+| ---- | ---- | ---- |
+| 函数 | function | 必须 
+
+-  返回结果
+   
+    * {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+ 
+- 示例说明
+    * 当返回status为1时，说明订单有效
 
