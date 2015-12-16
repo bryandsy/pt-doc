@@ -24,6 +24,13 @@ title: 平台游戏充值流程
 - 充值示例
 
 _默认以JSONP方式请求和返回数据（get/post）_
+
+ > 充值URL
+   
+      https://domain/recharge-url?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
+      
+  *recharge-url为平台提供*
+
 > 充值表单参数
 
 | 名称 | 名称ID | 说明 |
@@ -35,17 +42,12 @@ _默认以JSONP方式请求和返回数据（get/post）_
 | 充值数额 | iRmb  | 
 | 游戏元宝 | iGameCurrency |  
 
-JSONP参数
+公共参数
 
 | 名称 | 名称ID | 说明 |
 | ---- | ---- | ---- |
 | 函数 | function | 必须 
 
- > 充值URL
-   
-      https://domain/recharge-url?function=jQuery18106264256320428103_1445247783992&iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&_=1445247788405
-      
-  *recharge-url为平台提供*
   
 -  返回结果
 
@@ -75,7 +77,13 @@ JSONP参数
 
 游戏充值元宝时，需验证订单是否有效
 
+ _默认以JSONP方式请求和返回数据（get/post）_
+
+ > 验证URL 
    
+     https:/domain/[validateorder-url]?iGameId=1&iWorldId=1&vUserId=47502ea6-d2be-4f52-bf12-9b0652a0409c&iPlayerId=-1&iRmb=10&iDiscount=1&iGameCurrency=100&sign=sign_str&time=1342345467890   
+     
+   *validateorder-url为平台提供*
 
 > 验证参数
 
@@ -85,19 +93,41 @@ JSONP参数
 | 游戏角色 | iPlayerId |  
 | 游戏平台 | iGameId |  
 | 游戏区服 | iWorldId  | 
-| 充值数额 | iRmb  | 
+| 充值订单号 |  vOrderNo  | 
 | 游戏元宝 | iGameCurrency |  
 
-JSONP参数
+公共参数
 
-| 名称 | 名称ID | 说明 |
-| ---- | ---- | ---- |
-| 函数 | function | 必须 
+| 名称 | 名称ID | 名称 |名称 |
+| ---- | ---- | ---- | ---- |
+| 函数 | function | 必须 |
+| 签名 | sign | 必须 |
+| 时间戳 | time | 必须 |
+
+> sign签名
+
+    sha256(vOrderNo=xxx&iGameID=fff&www=xxx ...+gamesalt(游戏验证码))
 
 -  返回结果
-   
-    * {"success": true,"status": 1,"msg": null,"data": {"result":null}}  
+     
+> 成功
+ 
+        {
+            "success": true, //是否成功标识
+            "status": 1,//是否成功标识状态
+            "msg": null,//错误信息
+            "data": {"result":null}
+        }  
+
+> 失败
+
+    {
+        "success": false,//是否成功标识
+        "status": 0,//是否成功标识状态
+        "msg": null,//错误信息
+        "data": {"result":null}
+    }  
+
  
 - 示例说明
     * 当返回status为1时，说明订单有效
-
