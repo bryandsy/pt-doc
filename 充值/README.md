@@ -119,9 +119,9 @@ title: 平台游戏接入流程
 | 名称 | 名称ID | 类型  | 示例 | 备注 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 平台用户 | uid |  string | 47502ea6-d2be-4f52-bf12-9b0652a0409c |必须 |
-| 游戏角色 | role_id |  string | |  必须 |
-| 游戏ID | gkey |  string | |  必须 |
-| 游戏区服ID | skey  |  string  | | 必须 |
+| 游戏角色 | role_id |  string |234 |  必须 |
+| 游戏ID | gkey |  string | 1 |  必须 |
+| 游戏区服ID | skey  |  string  | 1 | 必须 |
 | 充值订单号 |  order_id  |  string  | | 必须 | 9e3e0a99a48647418476eeb0634f0eb7 | 必须 |
 | 游戏元宝 | coins |  string |   100  | 必须 |
 | 时间戳 | time  |   string | 1450251211782(单位 : milliseconds）  | 必须 |
@@ -158,7 +158,7 @@ title: 平台游戏接入流程
 | 名称 | 名称ID | 类型 | 示例 | 备注 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 游戏ID | gkey |  string | 1 | 必须 | 
-| 时间戳 | time  |  string | 1450251211782 | 必须 |
+| 时间戳 | time  |  string | 1450251211782(单位 : milliseconds） | 必须 |
 | 签名 | sign  |  string | 4ab2e6c59b3043ca3c51207b99dda19044093d18c153f97c6abd1e5138b1072 |必须 |
 
 > URL示例 
