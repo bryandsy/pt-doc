@@ -212,10 +212,6 @@ src="https://domain/static/js/box/moklin.box.plugin.js"></script>
            //isFrame表示页面控制的ID，可以自行更 改为当前的充值按钮
                     $("#isFrame").BOX({
                         pttype: "iframe", //加载页面组件方式
-                        iwh: {
-                            w: 800, //弹出层在页面的宽度
-                            h: 500  ///弹出层在页面的高度
-                        },
                         target:  https://recharge-url?iPlayerId=234&iGameId=1&iWorldId=1//调用平台充值页面
                     });
             });  
