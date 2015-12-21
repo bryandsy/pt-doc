@@ -160,11 +160,11 @@ title: 平台游戏接入流程
   
   ```pre   
 <link rel="stylesheet" type="text/css" 
-href=https://domain/static/css/box/box.css />
+href=https://cdn-prod.36b.me/recharge/static/css/box/box.css />
 <script type="application/javascript" 
-src="https://domainstatic/js/jquery-2.1.4.min.js"></script>
+src="https://cdn-prod.36b.me/recharge/static/js/jquery-2.1.4.min.js"></script>
 <script type="application/javascript" 
-src="https://domain/static/js/box/moklin.box.plugin.js"></script>
+src="https://cdn-prod.36b.me/recharge/static/js/box/moklin.box.plugin.js"></script>
 ```
 
 > 调用方法
@@ -201,11 +201,11 @@ src="https://domain/static/js/box/moklin.box.plugin.js"></script>
 ```pre
 <!-- 加载所需 资源-->
 <link rel="stylesheet" type="text/css" 
-href=https://domain/static/css/box/box.css />
+href=https://cdn-prod.36b.me/recharge/static/css/box/box.css />
 <script type="application/javascript" 
-src="https://domainstatic/js/jquery-2.1.4.min.js"></script>
+src="https://cdn-prod.36b.me/recharge/static/js/jquery-2.1.4.min.js"></script>
 <script type="application/javascript" 
-src="https://domain/static/js/box/moklin.box.plugin.js"></script>
+src="https://cdn-prod.36b.me/recharge/static/js/box/moklin.box.plugin.js"></script>
 <!-- 加载控件-->
 <script type="application/javascript" >
     $(document).ready(function(){
