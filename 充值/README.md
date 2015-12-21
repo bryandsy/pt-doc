@@ -167,16 +167,26 @@ src="https://cdn-prod.36b.me/recharge/static/js/jquery-2.1.4.min.js"></script>
 src="https://cdn-prod.36b.me/recharge/static/js/box/moklin.box.plugin.js"></script>
 ```
 
-> 调用方法
+> 调用方法与说明
 
+JS示例
   ```pre 
   $(document).ready(function(){
-                   //isFrame表示页面控制的ID，可以自行更 改
-                    $("#isFrame").BOX({
+                    $("#button").BOX({//button为充值按钮的ID
                         pttype: "iframe", //加载页面组件方式
                         target: "recharge-url" //调用平台充值页面
                     });
             });  
+  ```
+  
+  AS示例
+```pre 
+ 组件动作： on (press) {
+   $.fn.BOX({
+        pttype: "iframe", //加载页面组件方式
+        target: "recharge-url" //调用平台充值页面
+    });
+}
   ```
   
      
