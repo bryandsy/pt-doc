@@ -174,10 +174,6 @@ src="https://cdn-prod.36b.me/recharge/static/js/box/moklin.box.plugin.js"></scri
                    //isFrame表示页面控制的ID，可以自行更 改
                     $("#isFrame").BOX({
                         pttype: "iframe", //加载页面组件方式
-                        iwh: {
-                            w: 800, //弹出层在页面的宽度
-                            h: 500  ///弹出层在页面的高度
-                        },
                         target: "recharge-url" //调用平台充值页面
                     });
             });  
