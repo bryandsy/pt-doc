@@ -44,11 +44,11 @@ title: 平台游戏接入流程
 
 > URL示例 
 
-    https://domain/[getPlayerId]?参数
+    [https/http]://domain/[getPlayerId]?参数
 
 > 参数示例
 
-    uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&gkey=1&skey=1time=1450251211782&sign=4ab2e6c59b3043ca3c51207b99dda19044093d18c153f97c6abd1e5138b1072
+    uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&gkey=1&skey=1&time=1450251211782&sign=4ab2e6c59b3043ca3c51207b99dda19044093d18c153f97c6abd1e5138b1072
 
 > sign签名
 
@@ -57,12 +57,11 @@ title: 平台游戏接入流程
 > 返回结果
 
     {
-        "status": 0,//是否成功标识状态
-        "msg": null,//错误信息
-        "data": [
-                     {"role_id":"id","role_name":"name"}, 
-                     {"role_id":"id","role_name":"name"}
-                     ]
+        "userInfo": {
+                            "roleName":"roleName",
+                            "roleId":"roleId",
+                            "roleLevel":"roleLevel"
+                            }
     }  
 
 
@@ -90,7 +89,7 @@ title: 平台游戏接入流程
 
 > URL示例 
 
-    https://domain/[game-recharge-url]?参数
+    [https/http]://domain/[game-recharge-url]?参数
 
 > 参数示例
 
@@ -115,8 +114,10 @@ title: 平台游戏接入流程
     用于游戏币接口兑换时验证平台订单是否有效
 
 > 访问方式
-  
-   https/http [get/post]
+
+     https [get/post]
+   
+   *client请求可以直接访问https链接*
 > 必要参数
 
 | 名称 | 名称ID | 类型  | 示例 | 备注 |
@@ -215,11 +216,12 @@ src="https://cdn-prod.36b.me/recharge/static/js/box/moklin.box.plugin.js"></scri
 <!-- 加载控件-->
 <script type="application/javascript" >
     $(document).ready(function(){
-           //isFrame表示页面控制的ID，可以自行更 改为当前的充值按钮
-                    $("#isFrame").BOX({
+           //button表示页面控制的ID，可以自行更 改为当前的充值按钮
+                    $("#button").BOX({
                         pttype: "iframe", //加载页面组件方式
                         target:  https://recharge-url?iPlayerId=234&iGameId=1&iWorldId=1//调用平台充值页面
                     });
             });  
 </script>
 ```
+
