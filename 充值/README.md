@@ -56,13 +56,18 @@ title: 平台游戏接入流程
     
 > 返回结果
 
+
     {
-        "userInfo": {
-                            "roleName":"roleName",
-                            "roleId":"roleId",
-                            "roleLevel":"roleLevel"
-                            }
-    }  
+            "status": 1, //状态 1：成功，0 ：失败
+            "msg": null, //信息 返回状态为1时，此字段可忽略
+            "data":{
+                         "roles": {
+                                      "roleName":"roleName",
+                                      "roleId":"roleId",
+                                      "roleLevel":"roleLevel"
+                         }
+              }  
+    }
 
 
 ###   兑换游戏币接口
@@ -103,7 +108,7 @@ title: 平台游戏接入流程
 
       {
             "status": 1,//是否成功 1：成功，0 ：失败
-            "msg": null//信息
+            "msg": null//信息 返回状态为1时，此字段可忽略
         }  
 
 
@@ -147,7 +152,7 @@ title: 平台游戏接入流程
 
       {
             "status": 1,//状态 1：成功，0 ：失败
-            "msg": null//信息
+            "msg": null//信息 返回状态为1时，此字段可忽略
         }  
         
 #平台游戏客户端接入流程
