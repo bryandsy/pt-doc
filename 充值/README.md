@@ -61,11 +61,11 @@ title: 平台游戏接入流程
             "status": 1, //状态 1：成功，0 ：失败
             "msg": null, //信息 返回状态为1时，此字段可忽略
             "data":{
-                         "roles": {
+                         "roles": [{
                                       "roleName":"roleName",
                                       "roleId":"roleId",
                                       "roleLevel":"roleLevel"
-                         }
+                         }]
               }  
     }
 
