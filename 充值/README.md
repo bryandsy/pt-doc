@@ -12,7 +12,7 @@ title: 平台游戏接入流程
 1.  平台充值时，调用游戏玩家角色接口，用于查询玩家角色，以完成平台充值
 2. 兑换游戏币接口，使用时
  
-*  平台与游戏签名使用共同协商好的校验码(即SIGN_KEY)
+*  平台与游戏接入时协商好的登陆login_token和recharge_token
 
       *1. 游戏登陆使用 login_token*
       
@@ -206,7 +206,7 @@ JS示例
 | 名称 | 名称ID | 类型  | 示例 | 备注 |
 | ---- | ---- | ---- | ---- | ---- | ---- |
 | 游戏角色 | iPlayerId |  string |234 |  必须 |
-| 游戏ID | iGameId |  string | 1 |  必须 |
+| 游戏ID | iGameId |  string | 1 |  必须（平台的游戏ID） |
 | 游戏区服ID | iWorldId  |  string  | 1 | 必须 |
 
 > URL示例
