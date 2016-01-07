@@ -13,6 +13,8 @@ title: 平台游戏接入流程
 2. 兑换游戏币接口，使用时
  
 *  平台与游戏签名使用共同协商好的校验码(即SIGN_KEY)
+      *1. 游戏登陆使用 login_token*
+      *2. 游戏币兑换和玩家角色查询使用 recharge_tocken *
 *  平台订单验证接口
      *  为了防止伪造平台订单支付成功通知, 游戏兑换接口可以使用本接口做通知数据的校验，验证平台是否存在这个订单，保证平台充值和游戏币兑换过程及状态是正常的
 * 游戏币兑换接口
@@ -52,7 +54,7 @@ title: 平台游戏接入流程
 
 > sign签名
 
-    sha256( uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&gkey=1&skey=1&time=1342345467890SIGN_KEY)
+    sha256( uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&gkey=1&skey=1&time=1342345467890recharge_tocken)
     
 > 返回结果
 
@@ -102,7 +104,7 @@ title: 平台游戏接入流程
 
 > sign签名
 
-    sha256(uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&role_id=-1&gkey=1&skey=1&order_id=47502ea6&coins=100&moneys=1&time=1342345467890SIGN_KEY)
+    sha256(uid=47502ea6-d2be-4f52-bf12-9b0652a0409c&role_id=-1&gkey=1&skey=1&order_id=47502ea6&coins=100&moneys=1&time=1342345467890recharge_tocken)
     
 > 返回结果
 
